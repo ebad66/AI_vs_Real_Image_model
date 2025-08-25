@@ -13,9 +13,6 @@ data/
 # PyTorch model weights
 models/
 
-# Training results / logs
-results/
-
 # Jupyter checkpoints
 .ipynb_checkpoints/
 
