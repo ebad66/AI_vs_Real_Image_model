@@ -20,6 +20,8 @@ This project implements a binary image classifier to distinguish **AI-generated 
 
 - CNN Accuracy on Test Set: 96.2%
 - F1 Score: ~0.965
+- Final Training Loss: 0.0837
+- Final Validation Loss: 0.1161
 
 ---
 
