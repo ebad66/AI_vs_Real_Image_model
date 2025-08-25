@@ -1,6 +1,6 @@
 # AI vs Real Image Classifier
 
-**Python | PyTorch | CNN | ResNet-50**  
+**Python | PyTorch | CNN |**
 **July 2025**
 
 This project implements a binary image classifier to distinguish **AI-generated images** from **real photographs** using a dataset of 120,000 labeled samples from [CIFAKE](https://www.kaggle.com/datasets). The repository includes both training and inference scripts, as well as visual results.
@@ -18,9 +18,8 @@ This project implements a binary image classifier to distinguish **AI-generated 
 
 **Performance:**
 
-- CNN Accuracy on Test Set: ~83%
-- F1 Score per class: see `classification_metrics_dotplot.png`
-- Loss & accuracy curves: `training_curves.png`
+- CNN Accuracy on Test Set: 96.2%
+- F1 Score: ~0.965
 
 ---
 
@@ -46,7 +45,7 @@ Provides a clear overview of **true vs predicted labels**.
 
 ---
 
-## ⚡ Usage
+## Usage
 
 ### 1. Install Dependencies
 
