@@ -7,31 +7,42 @@ This project implements a binary image classifier to distinguish **AI-generated 
 
 ---
 
+## Model Details
 
-## 🔍 Project Overview
+- **Architecture:** 5-layer CNN (Conv → ReLU → MaxPool)
+- **Input:** Images resized to 224×224
+- **Optimizer:** Adam, LR=0.001
+- **Loss Function:** Binary Cross-Entropy
+- **Data Augmentation:** Random flips, rotations, normalization
+- **Early Stopping:** Patience = 5 epochs
 
-- **Goal:** Build a model that can distinguish AI-generated images from real ones.  
-- **Dataset:** CIFAKE dataset, 32×32 images, organized into `FAKE` and `REAL` classes.  
-- **Models:**
-  - **Custom 5-layer CNN**: Conv → ReLU → MaxPool layers. Achieved **83% test accuracy**.  
-  - **ResNet-50 (future work)**: Fine-tuning for higher performance. Achieved **94% accuracy** on validation.
+**Performance:**
 
-- **Techniques:**
-  - Data augmentation: random flips, rotations, normalization.
-  - Early stopping to prevent overfitting.
-  - Upscaling for plotting sample predictions.
+- CNN Accuracy on Test Set: ~83%
+- F1 Score per class: see `classification_metrics_dotplot.png`
+- Loss & accuracy curves: `training_curves.png`
 
 ---
 
-## 📊 Results
+## Results
 
-### Sample Predictions
+### 1. Training Curves
+
+![Training Curves](results/training_curves.png)
+
+Shows the **train/validation loss** and **accuracy** over epochs.
+
+### 2. Sample Predictions
 
 ![Sample Predictions](results/sample_predictions.png)
 
-### Confusion Matrix
+Displays **balanced predictions** of FAKE and REAL images with predicted confidence scores.
+
+### 3. Confusion Matrix
 
 ![Confusion Matrix](results/confusion_matrix.png)
+
+Provides a clear overview of **true vs predicted labels**.
 
 ---
 
@@ -80,3 +91,4 @@ scikit-learn
 The data/ folder is not included due to size. Download the CIFAKE dataset from Kaggle.
 
 The repository is designed for clarity and reproducibility of results. Figures and logs are saved automatically in results/.
+```
